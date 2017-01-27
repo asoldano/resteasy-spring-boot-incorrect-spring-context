@@ -1,4 +1,4 @@
-package com.github.gabrielruiu.resteasy;
+package com.github.gabrielruiu.jersey;
 
 import com.github.gabrielruiu.client.ClientInterface;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
  * @author <a href="mailto:gabriel.ruiu@1and1.ro">Gabriel Ruiu</a>
  */
 @Component
-@Path("/")
+@Path("/app")
 public class ApplicationResource {
 
     private ClientInterface client;
