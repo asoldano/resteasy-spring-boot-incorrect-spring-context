@@ -30,11 +30,11 @@ Screenshots:
  
  
 IMPORTANT NOTES:
- ** sometimes, running ```./mvnw clean test``` also yields the same result, but I have been unable to provide a reproducible example 
- ** after much debugging, I have determined the following
-    ** the Spring Application context is correctly loaded by Spring/Spring Boot
-    ** Spring Boot correctly injects the port number, and the rest client in the tests always call the REST instance they are supposed to
-    ** it is only when Resteasy takes over the request, that it somehow loads up the incorrect instance of the application, and hence the incorrect Spring Application context is used, which brings unexpected behavior
- ** during the tests, there is more than one instance of the application running, each on it's own port, which I assume has something to do with the issue
- ** there is another branch, ```jersey-instead-of-resteasy``` in which Jersey is used as the JAX-RS implementation, and where the tests are successful no matter if they are run with IntelliJ or with Maven
+ * sometimes, running ```./mvnw clean test``` also yields the same result, but I have been unable to provide a reproducible example 
+ * after much debugging, I have determined the following
+    * the Spring Application context is correctly loaded by Spring/Spring Boot
+    * Spring Boot correctly injects the port number, and the rest client in the tests always call the REST instance they are supposed to
+    * it is only when Resteasy takes over the request, that it somehow loads up the incorrect instance of the application, and hence the incorrect Spring Application context is used, which brings unexpected behavior
+ * during the tests, there is more than one instance of the application running, each on it's own port, which I assume has something to do with the issue
+ * there is another branch, ```jersey-instead-of-resteasy``` in which Jersey is used as the JAX-RS implementation, and where the tests are successful no matter if they are run with IntelliJ or with Maven
    
