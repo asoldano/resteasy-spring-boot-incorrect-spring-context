@@ -21,9 +21,9 @@ because it influences the outcome of the failing test.
 
 Screenshots:
  
- [Screenshot1](https://s27.postimg.org/595qawj2r/incorrect_app_context_01.png)
+ ![Screenshot1](https://s27.postimg.org/595qawj2r/incorrect_app_context_01.png)
  
- [Screenshot2](https://s27.postimg.org/bo4r7kpsj/incorrect_app_context_02.png)
+ ![Screenshot2](https://s27.postimg.org/bo4r7kpsj/incorrect_app_context_02.png)
  
 
  The test ```C_FailingTest``` fails because the output it receives from the REST resource is the one which is configured for the previous test ```B_SuccessfulResponseTwoTest```, by setting the ```client-impl-two``` profile. So somehow, *the Spring application context from the previous test (B_SuccessfulResponseTwoTest) is erroneously used/injected while executing the test after it (C_FailingTest)*.
