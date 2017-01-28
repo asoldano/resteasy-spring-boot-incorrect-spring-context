@@ -37,4 +37,6 @@ IMPORTANT NOTES:
     * it is only when Resteasy takes over the request, that it somehow loads up the incorrect instance of the application, and hence the incorrect Spring Application context is used, which brings unexpected behavior
  * during the tests, there is more than one instance of the application running, each on it's own port, which I assume has something to do with the issue
  * there is another branch, ```jersey-instead-of-resteasy``` in which Jersey is used as the JAX-RS implementation, and where the tests are successful no matter if they are run with IntelliJ or with Maven
+ * there is a ```DebugFilter``` with which I check what the Spring Application context looks like before the request is taken over by the Resteasy servlet, and it is always the correct one (the correct implementation of ```ClientInterface``` is loaded), no matter what test is executed
+    * it's only when running the third test, and when the request reaches Resteasy, that the incorrect app instance is loaded
    
