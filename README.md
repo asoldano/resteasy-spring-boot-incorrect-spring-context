@@ -30,7 +30,7 @@ Screenshots:
  
  
 IMPORTANT NOTES:
- * sometimes, running ```./mvnw clean test``` also yields the same result, but I have been unable to provide a reproducible example 
+ * sometimes, running ```./mvnw clean test``` also has the same error results, but I have been unable to provide a reproducible example 
  * after much debugging, I have determined the following
     * the Spring Application context is correctly loaded by Spring/Spring Boot
     * Spring Boot correctly injects the port number, and the rest client in the tests always call the REST instance they are supposed to
