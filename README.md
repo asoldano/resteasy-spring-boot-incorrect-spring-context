@@ -10,9 +10,9 @@ There are two implementations of ```ClientInterface```, which are toggled based 
 The issue itself appears during the tests.
 
 There are 3 tests
-** A_SuccessfulResponseOneTest
-** B_SuccessfulResponseTwoTest
-** C_FailingTest
+* A_SuccessfulResponseOneTest
+* B_SuccessfulResponseTwoTest
+* C_FailingTest
 
 They have been named A_, B_ and C_ in order to ensure the order of execution, 
 because it influences the outcome of the failing test.
